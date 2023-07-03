@@ -33,6 +33,7 @@ dependencies:
 
   get: ^4.6.5
   flutter_snake_navigationbar: ^0.6.1
+  badges: ^3.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
