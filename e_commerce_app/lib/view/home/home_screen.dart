@@ -1,10 +1,12 @@
 import 'package:e_commerce_app/component/main_header.dart';
 import 'package:e_commerce_app/controller/controllers.dart';
 import 'package:e_commerce_app/view/home/components/carousel_slider/carousel_slider_view.dart';
+import 'package:e_commerce_app/view/home/components/popular_category/popular_category_loading_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'components/carousel_slider/carousel_loading.dart';
+import 'components/popular_category/popular_category_loading.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,9 +21,16 @@ class HomeScreen extends StatelessWidget {
             if (homeController.bannerList.isNotEmpty) {
               return CarouselSliderView(bannerList: homeController.bannerList);
             } else {
-              return CarouselLoading();
+              return const CarouselLoading();
             }
-          })
+          }),
+          Obx(() {
+            if (homeController.popularCategoryList.isNotEmpty) {
+              return const PopularCategoryLoading();
+            } else {
+              return const PopularCategoryLoadingCard();
+            }
+          }),
         ],
       ),
     );
