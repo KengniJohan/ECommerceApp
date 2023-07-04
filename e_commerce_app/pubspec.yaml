@@ -36,6 +36,8 @@ dependencies:
   badges: ^3.1.1
   http: ^1.1.0
   shimmer: ^3.0.0
+  cached_network_image: ^3.2.3
+  carousel_slider: ^4.2.1
 
 
   # The following adds the Cupertino Icons font to your application.
