@@ -3,6 +3,7 @@ import 'package:e_commerce_app/controller/controllers.dart';
 import 'package:e_commerce_app/view/home/components/carousel_slider/carousel_slider_view.dart';
 import 'package:e_commerce_app/view/home/components/popular_category/popular_category.dart';
 import 'package:e_commerce_app/view/home/components/popular_category/popular_category_loading_card.dart';
+import 'package:e_commerce_app/view/home/components/popular_product/popular_product.dart';
 import 'package:e_commerce_app/view/home/components/popular_product/popular_product_loading.dart';
 import 'package:e_commerce_app/view/home/components/section_title.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,8 @@ class HomeScreen extends StatelessWidget {
                   const SectionTitle(title: "Popular Product"),
                   Obx(() {
                     if (homeController.popularProductList.isNotEmpty) {
-                      return const PopularProductLoading();
+                      return PopularProduct(
+                          popularProducts: homeController.popularProductList);
                     } else {
                       return const PopularProductLoading();
                     }
